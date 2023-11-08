@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Ganador</title>
+</head>
+<link rel="stylesheet" href="{{url_for('static', filename='/css/style.css')}}">
+<body>
+    <h1>¡Felicidades!</h1>
+    <p>Has adivinado el número en {{ session['intentos'] }} intentos.</p>
+    <p>Ingresa tu nombre para registrarlo:</p>
+    <form method="POST">
+        <input type="text" name="nombre" required>
+        <input type="submit" value="Registrar nombre">
+    </form>
+
+    <h2>Historial de Ganadores:</h2>
+    <ul>
+        {% for ganador in ganadores %}
+            <li>{{ ganador['nombre'] }} - {{ ganador['intentos'] }} intentos</li>
+        {% endfor %}
+    </ul>
+
+    <form method="POST" action="/">
+        <input type="submit" value="Jugar de nuevo" name="reinicio">
+    </form>
+</body>
+</html>

@@ -1,0 +1,13 @@
+*{
+    margin-top: 20px;
+    margin: 5px
+}
+body{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.aviso{
+    padding: 40px;
+}
